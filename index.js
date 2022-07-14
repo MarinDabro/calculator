@@ -13,7 +13,7 @@ let inputNum2 = [];
 let calculation = ''; */
 
 let res = 0;
-let storage = "";
+let storage = true;
 let bool = true;
 
 numBtn.forEach(btn => {
