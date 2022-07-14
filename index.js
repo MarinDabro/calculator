@@ -56,8 +56,7 @@ result.addEventListener('click', function () {
         
     }else if(calculation === "*"){
         res = Number(inputNum.join('')) * Number(inputNum2.join(''));
-        display2.innerText = res.toString();
-        
+        display2.innerText = res.toString();    
     }
     inputNum = [];
     calculation = "";
