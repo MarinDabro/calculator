@@ -14,6 +14,7 @@ let calculation = ''; */
 
 let res = 0;
 let storage = "";
+let bool = true;
 
 numBtn.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -25,7 +26,12 @@ numBtn.forEach(btn => {
       inputNum2.push(btn.innerText);
       display1.innerText = inputNum.join('') + calculation + inputNum2.join('');
     } */
-    display1.innerText += btn.innerText;
+    if (display2.innerText.length > 0 && bool === true) {
+      display1.innerText = btn.innerText;
+      bool = false;
+    } else {
+      display1.innerText += btn.innerText;
+    }
   });
 });
 
@@ -41,9 +47,10 @@ calc.forEach(btn => {
         calculation = btn.innerText;
         display1.innerText = inputNum.join('') + calculation;
     } */
-    if (display2.innerText.length > 0 && storage.length === 0) {
+    if (display2.innerText.length > 0 && storage.length === 0 && bool === true) {
       display1.innerText = display2.innerText + btn.innerText;
       storage = display1.innerText;
+      bool = false;
     } else {
       display1.innerText += btn.innerText
     }
@@ -77,6 +84,7 @@ result.addEventListener('click', function () {
   res = eval(display1.innerText.toString());
   display2.innerText = res;
   storage = "";
+  bool = true;
 });
 
 deleteBtn.addEventListener('click', function (){
@@ -95,6 +103,7 @@ deleteBtn.addEventListener('click', function (){
 clear.addEventListener('click', function(){
   display1.innerText = "";
   display2.innerText = "";
+  bool = true;
 
     /* inputNum = [];
     calculation = "";
