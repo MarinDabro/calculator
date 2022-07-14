@@ -48,9 +48,9 @@ div:active {
     background-color: darkslategray;
 }
 
-#equal {
+/* #equal {
     grid-column: 1 / span 3;
-}
+} */
 
 .display {
     grid-column: 1 / span 4;
