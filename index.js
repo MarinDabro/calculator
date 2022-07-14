@@ -36,7 +36,7 @@ calc.forEach(btn => {
     else if (inputNum.length > 0 && calculation.length === 0) {
         calculation = btn.innerText;
         display1.innerText = inputNum.join('') + calculation;
-      }
+    }
   });
 });
 
