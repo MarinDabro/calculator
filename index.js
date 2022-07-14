@@ -47,9 +47,9 @@ calc.forEach(btn => {
         calculation = btn.innerText;
         display1.innerText = inputNum.join('') + calculation;
     } */
-    if (display2.innerText.length > 0 && storage.length === 0 && bool === true) {
+    if (display2.innerText.length > 0 && storage === true && bool === true) {
       display1.innerText = display2.innerText + btn.innerText;
-      storage = display1.innerText;
+      storage = false;
       bool = false;
     } else {
       display1.innerText += btn.innerText
@@ -83,7 +83,7 @@ result.addEventListener('click', function () {
   } */
   res = eval(display1.innerText.toString());
   display2.innerText = res;
-  storage = "";
+  storage = true;
   bool = true;
 });
 
@@ -104,6 +104,7 @@ clear.addEventListener('click', function(){
   display1.innerText = "";
   display2.innerText = "";
   bool = true;
+  storage = true;
 
     /* inputNum = [];
     calculation = "";
